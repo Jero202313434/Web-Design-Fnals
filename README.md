@@ -119,26 +119,26 @@
         <h2>Welcome to Rev Rims: Where Every Revolution Begins!</h2>
         <p>At Rev Rims, we're not just about wheels; we're about igniting your passion for the road, one revolution at a time. 
 		Step into our world where speed, style, and precision craftsmanship collide to elevate your driving experience to new heights.</p>
-        <img src="C:\Users\User\Downloads\HomepageJerome.jpg" class="homepage-image">
+        <img src="HomepageJerome.jpg" class="homepage-image">
     </div>
     <div id="products" class="container">
         <h2>Products</h2>
         <div class="product">
-            <img src="C:\Users\User\Downloads\EVO II.jpg" alt="Product 1">
+            <img src="EVO II.jpg">
             <h2>Desmond RegaMaster EVO II</h2>
 			<p>The Desmond RegaMaster EVO II wheels, are an ultra-lightweight forged wheel that is familiar to circuits. This is a classic aluminum wheel that is loved not only in Japan but now by users all over the world.</p>
             <p>Price: ₱80000</p>
             <button class="add-to-cart" data-name="Desmond RegaMaster EVO II" data-price="80000">Add to Cart</button>
         </div>
         <div class="product">
-            <img src="C:\Users\User\Downloads\ce28.jpg" alt="Product 2">
+            <img src="ce28.jpg">
             <h2>Rays Volk Racing CE28 </h2>
 			<p>The CE28SL is a premium high-performance wheel boasting a stylish design. This wheel is ideal for sports car enthusiasts who want to upgrade their vehicles.</p>
             <p>Price: ₱67000</p>
             <button class="add-to-cart" data-name="Rays Volk Racing CE28 " data-price="67000">Add to Cart</button>
         </div>
         <div class="product">
-            <img src="C:\Users\User\Downloads\rpf1.jpg" alt="Product 3">
+            <img src="rpf1.jpg">
             <h2>Enkei RPF1</h2>
 			<p>The twin spokes on the Enkei RPF1 achieve better stress dispersion on curves, hard braking, and extreme race driving. 
 			CENTER DESIGN: Enkei’s pocket design around the bolt circles increases rigidity and keeps the wheel cooler during aggressive race driving. MAT PROCESS: Shaping by the MAT process reduces wheel weight by 10%-15%.</p>
@@ -146,7 +146,7 @@
             <button class="add-to-cart" data-name="Enkei RPF1" data-price="74000">Add to Cart</button>
         </div>
         <div class="product">
-            <img src="C:\Users\User\Downloads\mf10.jpg" alt="Product 4">
+            <img src="mf10.jpg">
             <h2>Mugen MF10</h2>
 			<p>The classic competition-grade Mugen wheel "MF", the return MF10 wheels combines the visual experience with the design style of the MUGEN body to meet the high-intensity requirements of track competition. 
 			The return of Mugen MF10 for the Civic Type R FK8! The price listed is for a set of 4 wheels. Limited Quantity. DREAM IT. BUILD IT. RACE IT.</p>
@@ -154,14 +154,14 @@
             <button class="add-to-cart" data-name="Mugen MF10" data-price="40">157000</button>
         </div>
         <div class="product">
-            <img src="C:\Users\User\Downloads\te37.jpg" alt="Product 5">
+            <img src="te37.jpg">
             <h2>Rays Volk Racing TE37</h2>
 			<<p>The TE37 is a groundbreaking product that sets the standard for what a performance wheel should be. It is Rays' first one-piece forged aluminum wheel, launched under its flagship Volk Racing line.</p>
             <p>Price: ₱120000</p>
             <button class="add-to-cart" data-name="Rays Volk Racing TE37" data-price="120000">Add to Cart</button>
         </div>
         <div class="product">
-            <img src="C:\Users\User\Downloads\ns2.jpg" alt="Product 6">
+            <img src="ns2.jpg">
             <h2>Sparco NS2</h2>
 			<p>The Racing Sparco NS-II Viper were one of the most popular JDM Wheels in the late 90’s. The Racing Sparco NS-II Viper feature 2 piece welded construction, and a very popular mesh design. 
 			The Racing Sparco NS-II Viper were produced by Crimson Inc but manufactured by Enkei Wheels in Japan. </p>
@@ -172,7 +172,6 @@
     <div id="cart" class="container">
         <h2>Shopping Cart</h2>
         <ul id="cart-items" style="list-style: none; padding: 0;">
-            <!-- Cart items will be added here -->
         </ul>
         <p>Total: $<span id="cart-total">0</span></p>
         <button class="checkout" onclick="showPage('checkout')">Proceed to Checkout</button>
