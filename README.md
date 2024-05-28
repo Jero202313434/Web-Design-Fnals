@@ -184,7 +184,7 @@
             <label for="address">Address:</label>
             <textarea id="address" name="address" required></textarea>
             <p>Total: $<span id="checkout-total">0</span></p>
-            <button type="submit">Submit</button>
+            <button class="checkout" onclick="completePurchase()">Complete Purchase</button>
         </form>
     </div>
     <footer>
@@ -205,7 +205,7 @@
     pages[page].classList.add('active');
 }
 
-function calculateCheckoutTotal() {
+    function calculateCheckoutTotal() {
     const checkedOutItems = document.querySelectorAll('.cart-item');
     let checkoutTotalAmount = 0;
     checkedOutItems.forEach(item => {
@@ -215,11 +215,11 @@ function calculateCheckoutTotal() {
     return checkoutTotalAmount.toFixed(2);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cartItems = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    const checkoutTotal = document.getElementById('checkout-total');
-    let total = 0;
+    document.addEventListener('DOMContentLoaded', () => {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      const checkoutTotal = document.getElementById('checkout-total');
+      let total = 0;
 
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', () => {
@@ -252,8 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cartTotal.textContent = '0';
         checkoutTotal.textContent = '0';
         showPage('home');
-     });
     });
-    </script>
+
+    // Function to handle completion of purchase
+    function completePurchase() {
+        alert('Purchase Complete!');
+        // Additional actions you may want to perform after purchase completion
+    }
+});
+
 </body>
 </html>
