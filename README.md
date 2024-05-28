@@ -241,6 +241,26 @@
                 cartTotal.textContent = '0';
                 checkoutTotal.textContent = '0';
                 showPage('home');
+    function calculateCheckoutTotal() {
+    const checkedOutItems = document.querySelectorAll('.cart-item');
+    let checkoutTotalAmount = 0;
+    checkedOutItems.forEach(item => {
+        const price = parseFloat(item.querySelector('p').textContent.split('$')[1]);
+        checkoutTotalAmount += price;
+    });
+    return checkoutTotalAmount.toFixed(2);
+    
+    document.querySelector('.billing-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const checkoutTotalAmount = calculateCheckoutTotal();
+    alert(`Order placed successfully! This page says the total is: $${checkoutTotalAmount}`);
+    cartItems.innerHTML = '';
+    cartTotal.textContent = '0';
+    checkoutTotal.textContent = '0';
+    showPage('home');
+});
+
+            
             });
         });
     </script>
