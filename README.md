@@ -199,49 +199,13 @@
         };
 
         function showPage(page) {
-            for (let key in pages) {
-                pages[key].classList.remove('active');
-            }
-            pages[page].classList.add('active');
-        }
+    for (let key in pages) {
+        pages[key].classList.remove('active');
+    }
+    pages[page].classList.add('active');
+}
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-            const checkoutTotal = document.getElementById('checkout-total');
-            let total = 0;
-
-            document.querySelectorAll('.add-to-cart').forEach(button => {
-                button.addEventListener('click', () => {
-                    const name = button.getAttribute('data-name');
-                    const price = parseFloat(button.getAttribute('data-price'));
-
-                    const listItem = document.createElement('li');
-                    listItem.className = 'cart-item';
-                    listItem.innerHTML = `<h2>${name}</h2><p>Price: $${price}</p><button class="remove-from-cart" data-price="${price}">Remove</button>`;
-                    cartItems.appendChild(listItem);
-
-                    total += price;
-                    cartTotal.textContent = total.toFixed(2);
-                    checkoutTotal.textContent = total.toFixed(2);
-
-                    listItem.querySelector('.remove-from-cart').addEventListener('click', () => {
-                        cartItems.removeChild(listItem);
-                        total -= price;
-                        cartTotal.textContent = total.toFixed(2);
-                        checkoutTotal.textContent = total.toFixed(2);
-                    });
-                });
-            });
-
-            document.querySelector('.billing-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Order placed successfully!');
-                cartItems.innerHTML = '';
-                cartTotal.textContent = '0';
-                checkoutTotal.textContent = '0';
-                showPage('home');
-    function calculateCheckoutTotal() {
+function calculateCheckoutTotal() {
     const checkedOutItems = document.querySelectorAll('.cart-item');
     let checkoutTotalAmount = 0;
     checkedOutItems.forEach(item => {
@@ -249,20 +213,47 @@
         checkoutTotalAmount += price;
     });
     return checkoutTotalAmount.toFixed(2);
-    
-    document.querySelector('.billing-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const checkoutTotalAmount = calculateCheckoutTotal();
-    alert(`Order placed successfully! This page says the total is: $${checkoutTotalAmount}`);
-    cartItems.innerHTML = '';
-    cartTotal.textContent = '0';
-    checkoutTotal.textContent = '0';
-    showPage('home');
-});
+}
 
-            
+document.addEventListener('DOMContentLoaded', () => {
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const checkoutTotal = document.getElementById('checkout-total');
+    let total = 0;
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+
+            const listItem = document.createElement('li');
+            listItem.className = 'cart-item';
+            listItem.innerHTML = `<h2>${name}</h2><p>Price: $${price}</p><button class="remove-from-cart" data-price="${price}">Remove</button>`;
+            cartItems.appendChild(listItem);
+
+            total += price;
+            cartTotal.textContent = total.toFixed(2);
+            checkoutTotal.textContent = total.toFixed(2);
+
+            listItem.querySelector('.remove-from-cart').addEventListener('click', () => {
+                cartItems.removeChild(listItem);
+                total -= price;
+                cartTotal.textContent = total.toFixed(2);
+                checkoutTotal.textContent = total.toFixed(2);
             });
         });
+    });
+
+    document.querySelector('.billing-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const checkoutTotalAmount = calculateCheckoutTotal();
+        alert(`Order placed successfully! This page says the total is: $${checkoutTotalAmount}`);
+        cartItems.innerHTML = '';
+        cartTotal.textContent = '0';
+        checkoutTotal.textContent = '0';
+        showPage('home');
+     });
+    });
     </script>
 </body>
 </html>
